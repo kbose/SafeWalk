@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SafeWalk</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <a href="http://104.237.151.11:5000/"><img src="http://i.imgur.com/10Da8k7.png" alt="SafeWalk Logo" style="display:block;margin-left:auto;margin-right:auto">
+        </a>
+        <div style="display:block; margin-left:auto;margin-right:auto">
+            <a class="btn btn-default" data-toggle="collapse" href="#collapse" aria-expanded="false" aria-controls="collapse">About</a>
+            <a class="btn btn-default" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">Video</a>
+            <a class="btn btn-default" data-toggle="collapse" href="#collapse3" aria-expanded="false" aria-controls="collapse3">Contact</a>
+        </div>
+        <div class="collapse" id="collapse2">
+            <div class="well">
+                <iframe width="560" height="315" src="//www.youtube.com/embed/jUyRin7p7D8" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="collapse" id="collapse">
+            <div class="well">
+                <p>Out late at night without a walking buddy? Scared to walk home alone?</p>
+                <p>Fear not, SafeWalk is here for you!</p>
+                <p>With new crimes popping up every day, from the small time thefts to the aggravated assaults, there was a need for a way to get home safe and sound.</p>
+                <p>SafeWalk incorporates the EveryBlock and Google Maps API to determine how to get where you want to get in the safest and most efficient way. SafeWalk rigorously sorts through possible routes, taking into account places of recent criminal activity and implements waypoints to find the best path for you!</p>
+                <p>SafeWalk was conceived by a group of 3 sophomores from Penn and a sophomore from MIT.</p>
+            </div>
+        </div>
+        <div class="collapse" id="collapse3">
+            <div class="well">
+                chris hua / chua@wharton.upenn.edu
+                <br /> tejas sundaresan / tejassun@mit.edu
+                <br /> yu wang / yuwang1@wharton.upenn.edu
+                <br /> kevin wang / kevw@seas.upenn.edu
+            </div>
+        </div>
+        <hr />
+        <form class="form-horizontal" action="/submit" method="POST">
+            <div class="form-group">
+                <label for="origin">From</label>
+                <input type="text" class="form-control" name="origin" placeholder="Enter starting point">
+            </div>
+            <div class="form-group">
+                <label for="destination">To</label>
+                <input type="text" class="form-control" name="destination" placeholder="Enter destination">
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+
+        </form>
+        <hr />
+
+        <div id="map">
+            <iframe frameborder="0" width="100%" height="600" style="border:0" src={{back}}>
+            </iframe>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted"><b>Made for PennApps Spring 2015.</b>
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <!-- KnockOut -->
+
+    <script>
+    </script>
+</body>
+
+</html>
